@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Predict</title>
+    <style>
+
+       body{
+        background-image:url("{% static 'DiabetesPrediction/images/heart.jpg'%}");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:1370px 670px;
+        }
+        .main{
+            left:580px;
+            width:550px;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+            position: relative;
+            bottom: 50px;
+        }
+        hi{
+            color:black;
+            font-size:30px;
+            font-weight:bold;
+           }
+        input[type=submit]{
+            background-color:#2a41c7;
+            border:2px;
+            color:white;
+            padding:8px 16px;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius:10px;
+            }
+        input:invalid:required{
+            border:2px dashed red;
+        }
+        .btn-home{
+            background-color:#2a41c7;
+            border:2px;
+            color:white;
+            padding:8px 16px;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius:10px;
+            }
+        .component {
+                color : navy;
+                height: 30px;
+                border-radius: 10px;
+                width: 225px;
+        }
+        .component-gen{
+            color : navy;
+            height: 15px;
+
+        }
+        .component-gen-fem {
+            right:130px;
+            position:relative;
+            color : navy;
+            height: 15px;
+        }
+        .component-FBS{
+            font-size:14px;
+            color : navy;
+            height: 15px;
+        }
+        .component-FBS-B {
+            font-size:14px;
+            right:100px;
+            position:relative;
+            color : navy;
+            height: 10px;
+        }
+        .componentR{
+            font-size:14px;
+            color : navy;
+            height: 15px;
+        }
+        .componentRe {
+            font-size:14px;
+            right:100px;
+            position:relative;
+            color : navy;
+            height: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div align="center" class="main">
+        <hi>Succesfully registered</hi>
+        <a href="predict.html"><input type="button" value="Home" class="btn-home"/></a>
+      </div>
+
+</div>
+</body>
+</html>

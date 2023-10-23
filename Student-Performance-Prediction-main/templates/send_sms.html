@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>report</title>
+        <style>
+        body{
+        background-image:url('/static/DiabetesPrediction/images/sen.jpg');
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:1370px 670px;
+        }
+        .cont{
+            top: 30%;
+            
+
+            width:550px;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+            position: relative;
+            bottom: 50px;
+        }
+        label{
+            color:aliceblue;
+        }
+        .btn-home{
+            background-color:#2a41c7;
+            border:2px;
+            color:white;
+            padding:8px 16px;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cont">
+        <form method="POST" action="{% url 'send_sms' %}">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>
+                        <label for="phone_number">Phone number:</label>
+                        <input type="text" name="phone_number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="message">Message:</label>
+                        <textarea name="message"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" class="btn-home">Send message</button>
+            <button type="button"  class="btn-home" onclick = "window.location = 'predict'">back</button>
+        </form>
+        </div>
+    </body>
+</html>
+
+

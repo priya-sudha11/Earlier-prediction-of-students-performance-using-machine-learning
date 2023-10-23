@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <style>
+        body{
+            background-image:url("{% static 'DiabetesPrediction/images/Resu.jpg'%}");
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:1370px 670px;
+        }
+        .main-result{
+            position:fixed;
+            top:233px;
+            left:310px;
+            width:550px;
+            border-radius::10px;
+            align-items:center;
+            padding:5%;
+        }
+        .rotated {
+            position: relative;
+            transform: rotate(-9deg); /* Equal to rotateZ(45deg) */
+            font-size: 40px;
+            left: 60px;
+            font-family: fantasy;
+            color: navy;
+        }
+    </style>
+</head>
+<body>
+        <div align="center" class="main-result">
+        <div class="rotated">
+         <hi>Result : {{result3}}</hi>
+        </div>
+        </div>
+</body>
+</html>

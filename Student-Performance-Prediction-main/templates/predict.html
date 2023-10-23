@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Record</title>
+    <style>
+      table,td,th{
+        border: 1px solid;
+        
+      }
+      .btn-home{
+            background-color:#2a41c7;
+            border:2px;
+            color:white;
+            padding:8px 16px;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius:10px;
+            }
+      a{
+        text-decoration: none;
+      }
+      body{
+        background-image:url('/static/DiabetesPrediction/images/log.jpg');
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:1370px 670px;
+        }
+        .cont{
+            
+            width:750px;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+            position: relative;
+            bottom: 50px;
+        }
+        a{
+          text-decoration: none;
+          color:white;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+    <h1>Student record</h1>
+    <br>
+    <br>
+    <table>
+      <tr>
+        <th> Name </th>
+        <th>Reg NO</th>
+        <th>Department</th>
+        <th>GPA</th>
+        <th>DCA 1</th>
+        <th>DCA 2</th>
+        <th>MODEl</th>
+        <th>Unittest 1</th>
+        <th>Unittest 2</th>
+        <th>Unittest 3</th>
+        <th>Unittest 4</th>
+        <th>Result</th>
+      </tr>
+      {% for item in data %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.reg_no }}</td>
+        <td>{{ item.dept }}</td>
+        <td>{{ item.gpa }}</td>
+        <td>{{ item.dca1 }}</td>
+        <td>{{ item.dca2 }}</td>
+        <td>{{ item.model }}</td>
+        <td>{{ item.unittest1 }}</td>
+        <td>{{ item.unittest2 }}</td>
+        <td>{{ item.unittest3 }}</td>
+        <td>{{ item.unittest4 }}</td>
+        <td>{{ item.result }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br>
+    <button type="button"  class="btn-home" onclick = "window.location = 'predict2'">ADD STUDENT</button>
+    <button type="submit" class="btn-home" ><a href="send_sms">Notify</a></button>
+    <button type="submit" class="btn-home" ><a href="../">back</a></button>
+  </div>
+  </body>
+</html>
